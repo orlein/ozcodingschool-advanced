@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Counter } from "./components/counter/Counter";
+import { OnboardingWizard } from "@/components/onboarding-wizard";
 
 export default function IndexPage() {
   return (
     <div>
-      <Counter />
       <button>Button Click!</button>
+      <OnboardingWizard />
     </div>
   );
 }
