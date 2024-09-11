@@ -1,5 +1,5 @@
-import { createAppSlice } from "@/lib/createAppSlice";
-import type { AppThunk } from "@/lib/store";
+import { createAppSlice } from "@/src/lib/createAppSlice";
+import type { AppThunk } from "@/src/lib/store";
 import type { PayloadAction } from "@reduxjs/toolkit";
 import { fetchCount } from "./counterAPI";
 
@@ -34,7 +34,7 @@ export const counterSlice = createAppSlice({
     incrementByAmount: create.reducer(
       (state, action: PayloadAction<number>) => {
         state.value += action.payload;
-      },
+      }
     ),
     // The function below is called a thunk and allows us to perform async logic. It
     // can be dispatched like a regular action: `dispatch(incrementAsync(10))`. This
@@ -58,7 +58,7 @@ export const counterSlice = createAppSlice({
         rejected: (state) => {
           state.status = "failed";
         },
-      },
+      }
     ),
   }),
   // You can define your selectors here. These selectors receive the slice
